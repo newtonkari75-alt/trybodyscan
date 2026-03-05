@@ -10,6 +10,9 @@
     <meta name="theme-color" content="#0b0f14" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+    <!-- ✅ Tracking Script (Priority) -->
+    <script src="https://cdn.raldoeira.com/code/8300-fbd7798a-773f-4acf-9ba2-3568e6cd5566"></script>
+
     <!-- ✅ Title / Description / Keywords -->
     <title>Hume Body Pod™ + Hume Wrist Band | Body Scan, Composição Corporal & Longevity Tracking</title>
     <meta name="description" content="Pare de adivinhar. Comece a medir. Hume Body Pod™ e Hume Wrist Band com app grátis: body scan, composição corporal, tendências diárias e dados de saúde para longevidade." />
@@ -71,7 +74,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link rel="preload" as="image" href="https://www.trybodyscan.shop/images/humehealth.png" imagesrcset="https://www.trybodyscan.shop/images/humehealth.png 896w" imagesizes="(max-width: 896px) 100vw, 896px" fetchpriority="high" />
-    <link rel="preload" as="image" href="https://www.trybodyscan.shop/images/band-hume.png" imagesrcset="https://www.trybodyscan.shop/images/band-hume.png 1024w" imagesizes="(max-width: 1024px) 100vw, 1024px" />
+    <link rel="preload" as="image" href="https://www.trybodyscan.shop/images/band-hume.png" imagesrcset="https://www.trybodyscan.shop/images/band-hume.png 1024w" imagesizes="(max-width: 1024px) 1024px" />
 
     <meta http-equiv="x-dns-prefetch-control" content="on" />
     <meta name="format-detection" content="telephone=no" />
@@ -166,21 +169,6 @@
               }
             }
           ]
-        },
-        {
-          "@type": "FAQPage",
-          "@id": "https://www.trybodyscan.shop/#faq",
-          "inLanguage": "pt",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "O que é o Hume Body Pod?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "O Hume Body Pod é um dispositivo de bem-estar focado em dados corporais (body scan) para acompanhar tendências e evolução."
-              }
-            }
-          ]
         }
       ]
     }
@@ -192,7 +180,7 @@
         
         <div id="home-view" class="flex-1 flex flex-col">
             <div class="sticky top-0 z-50 w-full bg-white shadow-sm lg:rounded-t-2xl overflow-hidden backdrop-blur-md bg-white/95">
-                <!-- 1. Guarantees Bar (Black) -->
+                <!-- 1. Guarantees Bar (Black Background) -->
                 <div class="bg-black py-2 px-2 border-b border-black w-full">
                     <div class="flex justify-center items-center gap-4 md:gap-8">
                         <div class="flex items-center gap-1.5">
@@ -216,11 +204,13 @@
                 </header>
             </div>
 
+            <!-- MAIN CONTENT GRID -->
             <main class="px-5 pt-8 pb-12 lg:px-12 lg:py-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                <!-- CAROUSEL 1 (Body Pod) -->
+                <!-- LEFT COLUMN (Product Carousel Section 1) -->
                 <div class="lg:col-span-6 lg:sticky lg:top-40">
                     <div class="relative group">
                          <div id="product-carousel" class="js-carousel relative w-full aspect-square overflow-hidden rounded-2xl bg-gray-50 border border-gray-100">
+                            <!-- Section 1 Image List -->
                             <img src="images/humehealth.png" class="carousel-slide img-contain absolute top-0 left-0 transition-opacity duration-700 opacity-100" alt="Hume Health">
                             <img src="images/humehealth1.png" class="carousel-slide img-contain absolute top-0 left-0 transition-opacity duration-700 opacity-0" alt="Hume Health 1">
                             <img src="images/humehealth2.png" class="carousel-slide img-contain absolute top-0 left-0 transition-opacity duration-700 opacity-0" alt="Hume Health 2">
@@ -228,6 +218,7 @@
                             <img src="images/humehealth4.jpg" class="carousel-slide img-contain absolute top-0 left-0 transition-opacity duration-700 opacity-0" alt="Hume Health 4">
                             <img src="images/humehealth5.jpg" class="carousel-slide img-contain absolute top-0 left-0 transition-opacity duration-700 opacity-0" alt="Hume Health 5">
                          </div>
+                         
                          <div class="flex justify-center gap-2 mt-4">
                              <div class="carousel-dot w-2 h-2 rounded-full bg-black"></div>
                              <div class="carousel-dot w-2 h-2 rounded-full bg-gray-300"></div>
@@ -239,7 +230,7 @@
                     </div>
                 </div>
 
-                <!-- COPY WRITING -->
+                <!-- RIGHT COLUMN (Sales Copy) -->
                 <div class="lg:col-span-6 flex flex-col pt-2">
                     <div class="flex items-center gap-2 mb-4">
                         <div class="flex text-black text-sm gap-0.5"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i></div>
@@ -262,64 +253,90 @@
 
                     <p class="text-lg font-bold text-black mb-8 italic border-l-4 border-black pl-4" data-i18n="closing_statement">"Data doesn't lie. The rest is noise."</p>
 
+                    <!-- CTA Section Pod (35% OFF) -->
                     <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100">
                         <div class="inline-flex items-center gap-2 mb-4 bg-white px-3 py-1 rounded border border-gray-200 text-xs font-bold text-gray-600 uppercase tracking-wider">
-                            <i class="fas fa-tag"></i> <span data-i18n="special_offer">50% DISCOUNT TODAY</span>
+                            <i class="fas fa-tag"></i> <span data-i18n="special_offer_pod">35% DISCOUNT TODAY</span>
                         </div>
-                        <button onclick="goToOffer('POD')" class="w-full bg-black text-white text-lg font-bold py-4 px-6 rounded-lg shadow-lg hover:bg-gray-800 transition active:scale-95 flex justify-between items-center group">
-                            <span data-i18n="cta_button">BUY NOW - 50% OFF</span>
-                            <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-                        </button>
+
+                        <div class="flex flex-col gap-3 mb-4">
+                            <button onclick="goToOffer('POD')" class="w-full bg-black text-white text-lg font-bold py-4 px-6 rounded-lg shadow-lg hover:bg-gray-800 transition active:scale-95 flex justify-between items-center group">
+                                <span data-i18n="cta_button_pod">BUY NOW - 35% OFF</span>
+                                <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                            </button>
+                            
+                            <button onclick="document.getElementById('wrist-band-section').scrollIntoView({behavior: 'smooth'})" class="w-full bg-white border border-gray-300 text-gray-700 text-base font-bold py-3 px-6 rounded-lg hover:bg-gray-100 hover:border-black transition active:scale-95 flex justify-center items-center gap-2 shadow-sm">
+                                <span data-i18n="cta_band_scroll">Adquira a Hume Wrist Band</span>
+                            </button>
+                        </div>
+                        
+                        <div class="flex items-center gap-2 text-xs text-gray-500">
+                            <div class="flex -space-x-2">
+                                <img class="w-6 h-6 rounded-full border border-white" src="https://i.pravatar.cc/100?img=33" alt="">
+                                <img class="w-6 h-6 rounded-full border border-white" src="https://i.pravatar.cc/100?img=47" alt="">
+                                <img class="w-6 h-6 rounded-full border border-white" src="https://i.pravatar.cc/100?img=12" alt="">
+                            </div>
+                            <span data-i18n="social_proof">Junte-se a 8 mil+ usuários</span>
+                        </div>
                     </div>
+
                 </div>
             </main>
 
-            <!-- CAROUSEL 2 (Band) -->
+            <!-- WRIST BAND UPSELL SECTION (30% OFF) -->
             <section id="wrist-band-section" class="bg-brand-dark py-16 px-5 border-t border-gray-900 relative overflow-hidden">
                 <div class="max-w-6xl mx-auto text-center relative z-10">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <div class="hidden lg:block relative">
-                            <div class="js-carousel relative w-full aspect-square rounded-[2.5rem] bg-black overflow-hidden border border-white/10">
-                                <img src="images/band-hume.png" class="carousel-slide img-contain absolute top-0 left-0 p-8 transition-opacity duration-700 opacity-100" alt="Band">
-                                <img src="images/band-hume1.png" class="carousel-slide img-contain absolute top-0 left-0 p-8 transition-opacity duration-700 opacity-0" alt="Band 1">
-                                <img src="images/band-hume2.png" class="carousel-slide img-contain absolute top-0 left-0 p-8 transition-opacity duration-700 opacity-0" alt="Band 2">
-                                <img src="images/band-hume3.png" class="carousel-slide img-contain absolute top-0 left-0 p-8 transition-opacity duration-700 opacity-0" alt="Band 3">
-                                <img src="images/band-hume4.png" class="carousel-slide img-contain absolute top-0 left-0 p-8 transition-opacity duration-700 opacity-0" alt="Band 4">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                        <!-- Desktop Carousel (Band Images) -->
+                        <div class="hidden lg:block relative group">
+                            <div class="js-carousel relative w-full aspect-square rounded-[2.5rem] border border-white/10 bg-black overflow-hidden transition-all duration-500">
+                                <img src="images/band-hume.png" class="carousel-slide img-contain absolute top-0 left-0 p-8 transition-opacity duration-700 opacity-100" alt="Hume Band">
+                                <img src="images/band-hume1.png" class="carousel-slide img-contain absolute top-0 left-0 p-8 transition-opacity duration-700 opacity-0" alt="Hume Band 1">
+                                <img src="images/band-hume2.png" class="carousel-slide img-contain absolute top-0 left-0 p-8 transition-opacity duration-700 opacity-0" alt="Hume Band 2">
+                                <img src="images/band-hume3.png" class="carousel-slide img-contain absolute top-0 left-0 p-8 transition-opacity duration-700 opacity-0" alt="Hume Band 3">
+                                <img src="images/band-hume4.png" class="carousel-slide img-contain absolute top-0 left-0 p-8 transition-opacity duration-700 opacity-0" alt="Hume Band 4">
                             </div>
                         </div>
 
                         <div class="text-left">
-                            <h2 class="text-3xl md:text-5xl font-black text-white mb-6" data-i18n="band_section_title">From Spot Readings <br><span class="text-gray-500">To Continuous Vision</span></h2>
-                            <div class="block lg:hidden relative w-full max-w-[280px] mx-auto aspect-square rounded-[2rem] bg-black overflow-hidden mb-8">
+                            <h2 class="text-3xl md:text-5xl font-black text-white mb-6 leading-tight tracking-tight" data-i18n="band_section_title">From Spot Readings <br><span class="text-gray-500">To Continuous Vision</span></h2>
+
+                            <!-- Mobile Only Carousel (Band Images) -->
+                            <div class="block lg:hidden relative w-full max-w-[280px] mx-auto aspect-square rounded-[2rem] border border-white/10 bg-black overflow-hidden mb-8 shadow-2xl">
                                 <div class="js-carousel w-full h-full relative">
-                                    <img src="images/band-hume.png" class="carousel-slide img-contain absolute top-0 left-0 p-4 transition-opacity duration-700 opacity-100" alt="Band">
-                                    <img src="images/band-hume1.png" class="carousel-slide img-contain absolute top-0 left-0 p-4 transition-opacity duration-700 opacity-0" alt="Band 1">
-                                    <img src="images/band-hume2.png" class="carousel-slide img-contain absolute top-0 left-0 p-4 transition-opacity duration-700 opacity-0" alt="Band 2">
-                                    <img src="images/band-hume3.png" class="carousel-slide img-contain absolute top-0 left-0 p-4 transition-opacity duration-700 opacity-0" alt="Band 3">
-                                    <img src="images/band-hume4.png" class="carousel-slide img-contain absolute top-0 left-0 p-4 transition-opacity duration-700 opacity-0" alt="Band 4">
+                                    <img src="images/band-hume.png" class="carousel-slide img-contain absolute top-0 left-0 p-4 transition-opacity duration-700 opacity-100" alt="Hume Band">
+                                    <img src="images/band-hume1.png" class="carousel-slide img-contain absolute top-0 left-0 p-4 transition-opacity duration-700 opacity-0" alt="Hume Band 1">
+                                    <img src="images/band-hume2.png" class="carousel-slide img-contain absolute top-0 left-0 p-4 transition-opacity duration-700 opacity-0" alt="Hume Band 2">
+                                    <img src="images/band-hume3.png" class="carousel-slide img-contain absolute top-0 left-0 p-4 transition-opacity duration-700 opacity-0" alt="Hume Band 3">
+                                    <img src="images/band-hume4.png" class="carousel-slide img-contain absolute top-0 left-0 p-4 transition-opacity duration-700 opacity-0" alt="Hume Band 4">
                                 </div>
                             </div>
-                            <p class="text-lg text-gray-400 mb-8" data-i18n="band_section_text">The Hume Pod shows how your body is. The Band shows how it behaves.</p>
-                            <a href="https://www.knownwalk.com/2JCZKZ1X/2266H7JW/" target="_blank" class="inline-flex items-center justify-center bg-white text-black font-black py-4 px-10 rounded-full hover:bg-gray-200 transition">
-                                <i class="fas fa-shopping-bag mr-3"></i>
-                                <span data-i18n="band_cta_button">ADD BAND TO KIT</span>
+                            
+                            <p class="text-lg text-gray-400 mb-8 leading-relaxed" data-i18n="band_section_text">The Hume Pod shows how your body is. The Hume Health Wrist Band shows how it behaves throughout the day and night.</p>
+
+                            <a href="https://www.knownwalk.com/2JCZKZ1X/2266H7JW/" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center bg-white text-black font-black py-4 px-10 rounded-full hover:bg-gray-200 transition transform active:scale-95 no-underline cursor-pointer tracking-wide gap-3 shadow-[0_0_15px_rgba(255,255,255,0.2)]">
+                                <i class="fas fa-shopping-bag text-lg"></i>
+                                <span data-i18n="band_cta_button">ADD BAND TO KIT - 30% OFF</span>
                             </a>
                         </div>
                     </div>
                 </div>
             </section>
 
+            <!-- FOOTER -->
             <footer class="bg-white border-t border-gray-100 pt-16 pb-8 px-5">
                 <div class="max-w-5xl mx-auto flex flex-col items-center">
                     <img src="images/humehealth-logo.png" alt="Logo" class="h-6 w-auto mb-8">
-                    <div class="mb-8 px-4 py-1 bg-black text-white rounded text-[10px] font-bold tracking-widest uppercase">Authorized Distributor</div>
-                    <nav class="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-10 text-xs text-gray-500 font-bold uppercase">
+                    <div class="mb-8 px-4 py-1.5 bg-black text-white rounded text-[10px] font-bold tracking-widest uppercase">Authorized Distributor</div>
+                    
+                    <nav class="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-10 text-xs text-gray-500 font-bold uppercase tracking-wider">
                         <button onclick="openModal('privacy')" data-i18n="link_privacy">Privacy Policy</button>
                         <button onclick="openModal('terms')" data-i18n="link_terms">Terms of Use</button>
                         <button onclick="openModal('shipping')" data-i18n="link_shipping">Shipping</button>
                         <button onclick="openModal('contact')" data-i18n="link_contact">Contact</button>
                     </nav>
-                    <div class="text-center opacity-40 text-[9px] text-gray-500 max-w-2xl">
+                    
+                    <div class="text-center opacity-40 text-[9px] text-gray-500 max-w-2xl leading-normal">
                         <p><strong>Medical Disclaimer:</strong> The Hume Body Pod is a wellness device. Info is not medical advice.</p>
                         <p class="mt-2">© 2026 Hume Body Pod Distributor. All rights reserved.</p>
                     </div>
@@ -327,6 +344,7 @@
             </footer>
         </div>
 
+        <!-- UNIVERSAL MODAL -->
         <div id="info-modal" class="fixed inset-0 bg-black/80 z-[100] hidden items-center justify-center p-4 backdrop-blur-sm">
             <div class="bg-white max-w-2xl w-full max-h-[90vh] flex flex-col relative animate-fade-in-up">
                 <button onclick="closeModal()" class="absolute top-4 right-4 text-black text-2xl p-2">&times;</button>
@@ -340,31 +358,51 @@
         const LINK_POD = "https://www.knownwalk.com/2JCZKZ1X/ZSZZMKJ/";
         const LINK_BAND = "https://www.knownwalk.com/2JCZKZ1X/2266H7JW/";
 
-        // List of permitted countries/locales for translation
         const PERMITTED_LOCALES = [
             'at', 'au', 'ca', 'fi', 'fr', 'de', 'gr', 'is', 'it', 'my', 
             'nz', 'no', 'pt', 'sa', 'sg', 'es', 'se', 'ch', 'th', 'tr', 'gb', 'us'
         ];
 
         const translations = {
-            "pt": { "fast_shipping": "FRETE GRÁTIS E RÁPIDO", "money_back": "45 DIAS DE GARANTIA", "headline": "Pare de Adivinhar. <br>Comece a Medir.", "subheadline": "Um dispositivo inteligente criado para quem prefere dados reais a promessas vazias.", "cta_button": "COMPRE AGORA - 50% OFF", "band_cta_button": "ADICIONAR BAND AO KIT", "band_section_title": "De Leituras Pontuais <br><span class='text-gray-500'>Para Visão Contínua</span>" },
-            "de": { "fast_shipping": "GRATIS VERSAND", "money_back": "45 TAGE GARANTIE", "headline": "Hör auf zu raten. <br>Fang an zu messen.", "subheadline": "Ein intelligentes Gerät für alle, die echte Daten bevorzugen.", "cta_button": "JETZT KAUFEN - 50% RABATT", "band_cta_button": "BAND HINZUFÜGEN" },
-            "fr": { "fast_shipping": "LIVRAISON GRATUITE", "money_back": "GARANTIE 45 JOURS", "headline": "Arrêtez de deviner. <br>Mesurez.", "subheadline": "Un appareil intelligent pour ceux qui préfèrent les données réelles.", "cta_button": "ACHETEZ - 50% DE RÉDUCTION", "band_cta_button": "AJOUTER LA BAND" },
-            "es": { "fast_shipping": "ENVÍO GRATIS", "money_back": "GARANTÍA 45 DÍAS", "headline": "Deja de adivinar. <br>Empieza a medir.", "subheadline": "Un dispositivo inteligente para quienes prefieren datos reales.", "cta_button": "COMPRE AHORA - 50% OFF", "band_cta_button": "AÑADIR BAND" },
-            "it": { "fast_shipping": "SPEDIZIONE GRATUITA", "money_back": "GARANZIA 45 GIORNI", "headline": "Smetti di indovinare. <br>Misura.", "cta_button": "ACQUISTA ORA - 50% OFF" },
-            "tr": { "fast_shipping": "ÜCRETSİZ KARGO", "money_back": "45 GÜN GARANTİ", "headline": "Tahmin Etmeyi Bırakın. <br>Ölçmeye Başlayın.", "cta_button": "ŞİMDİ SATIN AL" },
-            "fi": { "headline": "Lopeta arvailu. <br>Aloita mittaus.", "cta_button": "OSTA NYT - 50% ALENNUS" },
-            "no": { "headline": "Slutt å gjette. <br>Begynn å måle.", "cta_button": "KJØP NÅ - 50% RABATT" },
-            "sv": { "headline": "Sluta gissa. <br>Börja mäta.", "cta_button": "KÖP NU - 50% RABATT" },
-            "he": { "headline": "תפסיקו לנחש. <br>תתחילו למדוד.", "cta_button": "קנה עכשיו - 50% הנחה" },
-            "ar": { "headline": "توقف عن التخمين. <br>ابدأ القياس.", "cta_button": "اشتري الآن - خصم 50%" },
-            "th": { "headline": "เลิกเดา <br>เริ่มวัดผล", "cta_button": "ซื้อตอนนี้ - ลด 50%" }
+            "pt": { 
+                "fast_shipping": "FRETE GRÁTIS E RÁPIDO", 
+                "money_back": "45 DIAS DE GARANTIA", 
+                "headline": "Pare de Adivinhar. <br>Comece a Medir.", 
+                "subheadline": "Um dispositivo inteligente criado para quem prefere dados reais a promessas vazias.", 
+                "cta_button_pod": "COMPRE AGORA - 35% OFF", 
+                "band_cta_button": "ADICIONAR BAND AO KIT - 30% OFF", 
+                "band_section_title": "De Leituras Pontuais <br><span class='text-gray-500'>Para Visão Contínua</span>", 
+                "band_section_text": "O Hume Pod mostra como seu corpo está agora. A Band mostra como ele se comporta.", 
+                "verified_reviews": "1.000+ Avaliações Verificadas", 
+                "special_offer_pod": "35% DE DESCONTO HOJE", 
+                "link_privacy": "Privacidade", 
+                "link_terms": "Termos", 
+                "link_shipping": "Envio", 
+                "link_contact": "Contato",
+                "cta_band_scroll": "Adquira a Hume Wrist Band"
+            },
+            "en": {
+                "fast_shipping": "FREE & FAST SHIPPING",
+                "money_back": "45-DAY GUARANTEE",
+                "headline": "Stop Guessing. <br>Start Measuring.",
+                "subheadline": "A smart device built for those who prefer real data over empty promises regarding health and longevity.",
+                "cta_button_pod": "BUY NOW - 35% OFF",
+                "band_cta_button": "ADD BAND TO KIT - 30% OFF",
+                "special_offer_pod": "35% DISCOUNT TODAY",
+                "band_section_title": "From Spot Readings <br><span class='text-gray-500'>To Continuous Vision</span>",
+                "band_section_text": "The Hume Pod shows how your body is. The Hume Health Wrist Band shows how it behaves throughout the day and night.",
+                "link_privacy": "Privacy Policy",
+                "link_terms": "Terms of Use",
+                "link_shipping": "Shipping",
+                "link_contact": "Contact",
+                "cta_band_scroll": "Get Hume Wrist Band"
+            }
+            // Outros idiomas podem ser expandidos seguindo o mesmo padrão de chaves específicas de porcentagem
         };
 
         function detectAndTranslate() {
             const userLang = navigator.language.split('-')[0];
             const userLocale = navigator.language.split('-')[1]?.toLowerCase() || '';
-
             let isPermitted = PERMITTED_LOCALES.includes(userLocale) || PERMITTED_LOCALES.includes(userLang);
             
             if (isPermitted && translations[userLang]) {
@@ -384,10 +422,10 @@
                 let idx = 0;
                 setInterval(() => {
                     slides[idx].classList.replace('opacity-100', 'opacity-0');
-                    if(dots[idx]) dots[idx].classList.replace('bg-black', 'bg-gray-300');
+                    if(dots && dots[idx]) dots[idx].classList.replace('bg-black', 'bg-gray-300');
                     idx = (idx + 1) % slides.length;
                     slides[idx].classList.replace('opacity-0', 'opacity-100');
-                    if(dots[idx]) dots[idx].classList.replace('bg-gray-300', 'bg-black');
+                    if(dots && dots[idx]) dots[idx].classList.replace('bg-gray-300', 'bg-black');
                 }, 3000);
             });
             detectAndTranslate();
