@@ -96,16 +96,16 @@
             <!-- STICKY HEADER WRAPPER -->
             <div class="sticky top-0 z-50 w-full bg-white shadow-sm lg:rounded-t-2xl overflow-hidden backdrop-blur-md bg-white/95">
                 
-                <!-- 1. Guarantees Bar -->
-                <div class="bg-gray-100 py-2 px-2 border-b border-gray-100 w-full">
+                <!-- 1. Guarantees Bar (Black Background) -->
+                <div class="bg-black py-2 px-2 border-b border-black w-full">
                     <div class="flex justify-center items-center gap-4 md:gap-8">
-                        <div class="flex items-center gap-1.5 opacity-80">
-                            <i class="fas fa-truck text-xs text-brand-dark"></i>
-                            <span class="text-[10px] sm:text-xs font-bold text-gray-600 uppercase tracking-wide" data-i18n="fast_shipping">FRETE GRÁTIS E RÁPIDO</span>
+                        <div class="flex items-center gap-1.5">
+                            <i class="fas fa-truck text-xs text-white"></i>
+                            <span class="text-[10px] sm:text-xs font-bold text-white uppercase tracking-wide" data-i18n="fast_shipping">FRETE GRÁTIS E RÁPIDO</span>
                         </div>
-                        <div class="flex items-center gap-1.5 opacity-80">
-                            <i class="fas fa-shield-alt text-xs text-brand-dark"></i>
-                            <span class="text-[10px] sm:text-xs font-bold text-gray-600 uppercase tracking-wide" data-i18n="money_back">45 DIAS DE GARANTIA</span>
+                        <div class="flex items-center gap-1.5">
+                            <i class="fas fa-shield-alt text-xs text-white"></i>
+                            <span class="text-[10px] sm:text-xs font-bold text-white uppercase tracking-wide" data-i18n="money_back">45 DIAS DE GARANTIA</span>
                         </div>
                     </div>
                 </div>
@@ -131,12 +131,13 @@
                 <div class="lg:col-span-6 lg:sticky lg:top-40">
                     <div class="relative group">
                          <div id="product-carousel" class="js-carousel relative w-full aspect-square overflow-hidden rounded-2xl bg-gray-50 border border-gray-100">
+                            <!-- Section 1 Image List -->
                             <img src="images/humehealth.png" class="carousel-slide img-contain absolute top-0 left-0 transition-opacity duration-700 opacity-100" alt="Hume Health">
                             <img src="images/humehealth1.png" class="carousel-slide img-contain absolute top-0 left-0 transition-opacity duration-700 opacity-0" alt="Hume Health 1">
                             <img src="images/humehealth2.png" class="carousel-slide img-contain absolute top-0 left-0 transition-opacity duration-700 opacity-0" alt="Hume Health 2">
                             <img src="images/humehealth3.png" class="carousel-slide img-contain absolute top-0 left-0 transition-opacity duration-700 opacity-0" alt="Hume Health 3">
                             <img src="images/humehealth4.png" class="carousel-slide img-contain absolute top-0 left-0 transition-opacity duration-700 opacity-0" alt="Hume Health 4">
-                            <img src="images/humehealth5.png" class="carousel-slide img-contain absolute top-0 left-0 transition-opacity duration-700 opacity-0" alt="Hume Health 5">
+                            <img src="images/humehealth5.jpg" class="carousel-slide img-contain absolute top-0 left-0 transition-opacity duration-700 opacity-0" alt="Hume Health 5">
                          </div>
                          
                          <div class="flex justify-center gap-2 mt-4">
@@ -374,22 +375,19 @@
                 
                 if (slides.length > 0) {
                     setInterval(() => {
-                        // Fade out current
                         slides[currentSlide].classList.remove('opacity-100');
                         slides[currentSlide].classList.add('opacity-0');
                         
-                        if (dots.length > currentSlide) {
+                        if (dots && dots.length > currentSlide) {
                             dots[currentSlide].classList.replace('bg-black', 'bg-gray-300');
                         }
 
-                        // Calculate next
                         currentSlide = (currentSlide + 1) % slides.length;
 
-                        // Fade in next
                         slides[currentSlide].classList.remove('opacity-0');
                         slides[currentSlide].classList.add('opacity-100');
 
-                        if (dots.length > currentSlide) {
+                        if (dots && dots.length > currentSlide) {
                             dots[currentSlide].classList.replace('bg-gray-300', 'bg-black');
                         }
                     }, 3000);
