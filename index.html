@@ -94,7 +94,7 @@
             <div class="lg:col-span-6 flex flex-col">
                 <div class="flex items-center gap-2 mb-6">
                     <span class="text-yellow-500 text-sm">★★★★★</span>
-                    <span class="text-gray-500 font-bold text-[10px] tracking-widest uppercase" data-i18n="reviews_verified">1,000+ Verified Reviews</span>
+                    <span class="text-gray-500 font-bold text-[10px] tracking-widest uppercase" data-i18n="reviews_verified">1,000+ VERIFIED REVIEWS</span>
                 </div>
 
                 <h1 class="text-4xl md:text-6xl font-black leading-tight text-gray-900 mb-6 tracking-tight" data-i18n="headline">Stop Guessing.<br>Start Measuring.</h1>
@@ -157,7 +157,7 @@
         <footer class="bg-white pt-16 pb-8 px-6 border-t border-gray-100 text-center">
             <div class="max-w-5xl mx-auto flex flex-col items-center">
                 <img src="images/humehealth-logo.png" alt="HumeHealth" class="h-6 w-auto mb-6">
-                <div class="mb-10 px-4 py-1.5 bg-black text-white rounded text-[10px] font-bold tracking-widest uppercase">AUTHORIZED DISTRIBUTOR</div>
+                <div class="mb-10 px-4 py-1.5 bg-black text-white rounded text-[10px] font-bold tracking-widest uppercase" data-i18n="auth_distributor">AUTHORIZED DISTRIBUTOR</div>
                 
                 <nav class="flex flex-wrap justify-center gap-x-10 gap-y-4 mb-12 text-xs text-gray-500 font-black uppercase tracking-wider">
                     <button onclick="openModal('privacy')" data-i18n="link_privacy">Privacy Policy</button>
@@ -168,7 +168,7 @@
                 
                 <div class="opacity-40 text-[10px] text-gray-500 max-w-3xl leading-normal space-y-4 uppercase tracking-tighter">
                     <p data-i18n="medical_disclaimer">Medical Disclaimer: The Hume Pod Is A Wellness Device That Provides Information For Health Tracking Purposes And Is Not A Substitute For Professional Medical Advice, Diagnosis, Or Treatment.</p>
-                    <p>© 2026 Hume Pod Distributor. All Rights Reserved.</p>
+                    <p data-i18n="copyright">© 2026 Hume Pod Distributor. All Rights Reserved.</p>
                 </div>
             </div>
         </footer>
@@ -198,7 +198,7 @@
         function detectAndTranslate() {
             const userLang = navigator.language.split('-')[0];
             const userLocale = navigator.language.split('-')[1]?.toLowerCase() || '';
-            if (userLang === 'pt') return; // Default to English for Portuguese speakers
+            if (userLang === 'pt') return; // Default to English for Portuguese speakers as requested
             const isPermitted = PERMITTED_LOCALES.includes(userLocale) || PERMITTED_LOCALES.includes(userLang);
             if (isPermitted && translations[userLang]) {
                 const content = translations[userLang];
