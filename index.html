@@ -10,6 +10,9 @@
     <meta name="theme-color" content="#0b0f14" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+    <!-- ✅ Favicon (Folder images/) -->
+    <link rel="icon" type="image/png" href="images/favcon-hume.png">
+
     <!-- ✅ Tracking Script (Priority) -->
     <script src="https://cdn.raldoeira.com/code/8300-fbd7798a-773f-4acf-9ba2-3568e6cd5566"></script>
 
@@ -64,6 +67,8 @@
         body { font-family: 'DM Sans', sans-serif; }
         .bg-brand-dark { background-color: #111111; }
         html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-thumb { background: #555; border-radius: 4px; }
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         .animate-fade-in-up { animation: fadeInUp 0.3s ease-out forwards; }
         .img-contain { width: 100%; height: 100%; object-fit: contain; }
@@ -81,14 +86,10 @@
           "inLanguage": "en"
         },
         {
-          "@type": "Product",
-          "name": "Hume Body Pod™",
-          "brand": { "@type": "Brand", "name": "Hume" },
-          "offers": {
-            "@type": "Offer",
-            "priceCurrency": "USD",
-            "availability": "https://schema.org/InStock"
-          }
+          "@type": "ProductGroup",
+          "name": "Hume Longevity System",
+          "description": "Body Pod (35% OFF) and Hume Band (30% OFF) ecosystem.",
+          "brand": { "@type": "Brand", "name": "Hume" }
         }
       ]
     }
@@ -244,7 +245,7 @@
         const LINK_POD = "https://www.knownwalk.com/2JCZKZ1X/ZSZZMKJ/";
         const LINK_BAND = "https://www.knownwalk.com/2JCZKZ1X/2266H7JW/";
 
-        // Allowed translation countries (excluding Portugal/Brazil for PT removal)
+        // Allowed locales (excluding PT per instructions)
         const PERMITTED_LOCALES = [
             'at', 'au', 'ca', 'fi', 'fr', 'de', 'gr', 'is', 'it', 'my', 
             'nz', 'no', 'sa', 'sg', 'es', 'se', 'ch', 'th', 'tr', 'gb', 'us', 'pe'
@@ -255,19 +256,14 @@
             "fr": { "fast_shipping": "LIVRAISON GRATUITE", "money_back": "GARANTIE 45 JOURS", "headline": "Arrêtez de deviner. <br>Mesurez.", "subheadline": "Un appareil intelligent pour ceux qui préfèrent les données réelles.", "cta_button_pod": "ACHETEZ - 35% DE RÉDUCTION", "band_cta_button": "AJOUTER LA BAND - 30% DE RÉDUCTION" },
             "es": { "fast_shipping": "ENVÍO GRATIS", "money_back": "GARANTÍA 45 DÍAS", "headline": "Deja de adivinar. <br>Empieza a medir.", "subheadline": "Un dispositivo inteligente para quienes prefieren datos reales.", "cta_button_pod": "COMPRE AHORA - 35% OFF", "band_cta_button": "AÑADIR BAND - 30% OFF" },
             "it": { "headline": "Smetti di indovinare. <br>Misura.", "cta_button_pod": "ACQUISTA ORA - 35% OFF" },
-            "fi": { "headline": "Lopeta arvailu. <br>Aloita mittaus.", "cta_button_pod": "OSTA NYT - 35% ALENNUS" },
-            "no": { "headline": "Slutt å gjette. <br>Begynn å måle.", "cta_button_pod": "KJØP NÅ - 35% RABATT" },
-            "sv": { "headline": "Sluta gissa. <br>Börja mäta.", "cta_button_pod": "KÖP NU - 35% RABATT" },
-            "tr": { "headline": "Tahmin Etmeyi Bırakın. <br>Ölçmeye Başlayın.", "cta_button_pod": "ŞİMDİ SATIN AL - %35 İNDİRİM" },
-            "ar": { "headline": "توقف عن التخمين. <br>ابدأ القياس.", "cta_button_pod": "اشتري الآن - خصم 35%" },
-            "th": { "headline": "เลิกเดา <br>เริ่มวัดผล", "cta_button_pod": "ซื้อตอนนี้ - ลด 35%" }
+            "tr": { "headline": "Tahmin Etmeyi Bırakın. <br>Ölçmeye Başlayın.", "cta_button_pod": "ŞİMDİ SATIN AL - %35 İNDİRİM" }
         };
 
         function detectAndTranslate() {
             const userLang = navigator.language.split('-')[0];
             const userLocale = navigator.language.split('-')[1]?.toLowerCase() || '';
 
-            // Strict check: if user speaks Portuguese, they get the default English
+            // If language is Portuguese, stick to English default
             if (userLang === 'pt') return;
 
             const isPermitted = PERMITTED_LOCALES.includes(userLocale) || PERMITTED_LOCALES.includes(userLang);
@@ -289,10 +285,10 @@
                 let idx = 0;
                 setInterval(() => {
                     slides[idx].classList.replace('opacity-100', 'opacity-0');
-                    if(dots[idx]) dots[idx].classList.replace('bg-black', 'bg-gray-300');
+                    if(dots && dots[idx]) dots[idx].classList.replace('bg-black', 'bg-gray-300');
                     idx = (idx + 1) % slides.length;
                     slides[idx].classList.replace('opacity-0', 'opacity-100');
-                    if(dots[idx]) dots[idx].classList.replace('bg-gray-300', 'bg-black');
+                    if(dots && dots[idx]) dots[idx].classList.replace('bg-gray-300', 'bg-black');
                 }, 3000);
             });
             detectAndTranslate();
@@ -303,10 +299,10 @@
         function openModal(type) { 
             const modal = document.getElementById('info-modal');
             let content = "";
-            if(type === 'privacy') content = "<h2>Privacy Policy</h2><p>Your data is processed securely to enhance your experience. We do not sell personal data to third parties.</p>";
-            if(type === 'terms') content = "<h2>Terms of Use</h2><p>As an authorized distributor, we provide warranty and support for all authentic Hume devices purchased here.</p>";
-            if(type === 'shipping') content = "<h2>Shipping Info</h2><p>Free express international shipping is included. Typical delivery time is 7-15 business days.</p>";
-            if(type === 'contact') content = "<h2>Contact</h2><p>Email: support@trybodyscan.shop<br>Hours: Mon-Fri, 9am - 5pm EST</p>";
+            if(type === 'privacy') content = "<h2>Privacy Policy</h2><p>Your data is processed securely. We do not sell data to third parties.</p>";
+            if(type === 'terms') content = "<h2>Terms of Use</h2><p>Official authorized distributor site. Warranty is honored for all purchases.</p>";
+            if(type === 'shipping') content = "<h2>Shipping</h2><p>Free express shipping is included for your region.</p>";
+            if(type === 'contact') content = "<h2>Contact</h2><p>Email: support@trybodyscan.shop</p>";
             
             document.getElementById('modal-content').innerHTML = content;
             modal.classList.replace('hidden', 'flex');
